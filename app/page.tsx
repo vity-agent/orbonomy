@@ -214,7 +214,7 @@ export default function Home() {
             borderRadius: "6px", fontSize: "0.8rem", lineHeight: 1.8,
             overflow: "auto",
           }}>
-{`$ curl -X POST https://orbonomy.vercel.app/api/llm/chat \
+{`$ curl -X POST https://orbonomy.xyz/api/llm/chat \
     -H "Content-Type: application/json" \
     -d '{"messages":[{"role":"user","content":"Hello"}]}'
 

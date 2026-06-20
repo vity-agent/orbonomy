@@ -9,12 +9,12 @@
       "email": "orbonomy@proton.me"
     },
     "x-logo": {
-      "url": "https://orbonomy.vercel.app/favicon.png"
+      "url": "https://orbonomy.xyz/favicon.png"
     }
   },
   "servers": [
     {
-      "url": "https://orbonomy.vercel.app"
+      "url": "https://orbonomy.xyz"
     }
   ],
   "paths": {

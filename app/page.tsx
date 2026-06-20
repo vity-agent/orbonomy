@@ -269,7 +269,8 @@ $ # Retry with payment signature
               <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                 <a href="https://orbonomy.xyz" style={{ fontSize: "0.85rem", color: "#111", textDecoration: "none", fontWeight: 500 }}>Orbonomy</a>
                 <a href="https://api.orbonomy.xyz" style={{ fontSize: "0.85rem", color: "#555", textDecoration: "none" }}>Orbonomy API</a>
-                <a href="https://nova.orbonomy.xyz" style={{ fontSize: "0.85rem", color: "#555", textDecoration: "none" }}>Nova</a>
+                <a href="https://nova.orbonomy.xyz" style="font-size: 0.85rem; color: #555; text-decoration: none">Nova</a>
+                <a href="https://veritas.orbonomy.xyz" style="font-size: 0.85rem; color: #555; text-decoration: none">Veritas</a>
               </div>
             </div>
             <div>

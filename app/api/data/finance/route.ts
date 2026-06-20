@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { dataCache } from "@/lib/cache";
 
 const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY || "";
+const YAHOO_HOST = "yahoo-finance15.p.rapidapi.com";
 
 export async function POST(request: NextRequest) {
   try {
@@ -19,17 +20,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "Finance API not configured" }, { status: 503 });
     }
 
-    const res = await fetch(`https://yahoo-finance-real-time1.p.rapidapi.com/stock/get-quote?symbol=${encodeURIComponent(symbol)}`, {
+    const res = await fetch(`https://yahoo-finance15.p.rapidapi.com/api/v1/markets/stock/quotes?ticker=${encodeURIComponent(symbol)}`, {
       headers: {
         "X-RapidAPI-Key": RAPIDAPI_KEY,
-        "X-RapidAPI-Host": "yahoo-finance-real-time1.p.rapidapi.com",
+        "X-RapidAPI-Host": YAHOO_HOST,
       },
     });
 
     if (!res.ok) return NextResponse.json({ success: false, error: "Finance API error" }, { status: 502 });
 
     const data = await res.json();
-    const response = { success: true, symbol, data };
+    const response = { success: true, symbol, data: data.body || data };
     dataCache.set(cacheKey, response);
     return NextResponse.json(response);
   } catch (e) {

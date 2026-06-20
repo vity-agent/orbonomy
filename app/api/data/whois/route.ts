@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { dataCache } from "@/lib/cache";
 
 const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY || "";
+const WHOIS_HOST = "zozor54-whois-lookup-v1.p.rapidapi.com";
 
 export async function POST(request: NextRequest) {
   try {
@@ -19,10 +20,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "WHOIS API not configured" }, { status: 503 });
     }
 
-    const res = await fetch(`https://whoisapi-domain-whois-v1.p.rapidapi.com/api/v1?domainName=${encodeURIComponent(domain)}`, {
+    const res = await fetch(`https://zozor54-whois-lookup-v1.p.rapidapi.com/ssl-cert-check?domain=${encodeURIComponent(domain)}`, {
       headers: {
         "X-RapidAPI-Key": RAPIDAPI_KEY,
-        "X-RapidAPI-Host": "whoisapi-domain-whois-v1.p.rapidapi.com",
+        "X-RapidAPI-Host": WHOIS_HOST,
       },
     });
 

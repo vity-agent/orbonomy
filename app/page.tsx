@@ -260,13 +260,27 @@ $ # Retry with payment signature
       {/* FOOTER */}
       <footer style={{
         padding: "3rem", borderTop: "1px solid #eee",
-        display: "flex", justifyContent: "space-between", alignItems: "center",
       }}>
-        <span style={{ fontFamily: "'DM Serif Display', serif", fontSize: "1rem" }}>Orbonomy</span>
-        <div style={{ display: "flex", gap: "2rem", fontSize: "0.8rem", color: "#999" }}>
-          <a href="/openapi.json" style={{ color: "#999", textDecoration: "none" }}>OpenAPI</a>
-          <span>Base Mainnet</span>
-          <span>USDC</span>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", maxWidth: "1000px", margin: "0 auto" }}>
+          <span style={{ fontFamily: "'DM Serif Display', serif", fontSize: "1rem" }}>Orbonomy</span>
+          <div style={{ display: "flex", gap: "3rem" }}>
+            <div>
+              <div style={{ fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Product</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                <a href="https://orbonomy.xyz" style={{ fontSize: "0.85rem", color: "#111", textDecoration: "none", fontWeight: 500 }}>Orbonomy</a>
+                <a href="https://api.orbonomy.xyz" style={{ fontSize: "0.85rem", color: "#555", textDecoration: "none" }}>Orbonomy API</a>
+                <a href="https://nova.orbonomy.xyz" style={{ fontSize: "0.85rem", color: "#555", textDecoration: "none" }}>Nova</a>
+              </div>
+            </div>
+            <div>
+              <div style={{ fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Resources</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                <a href="/openapi.json" style={{ fontSize: "0.85rem", color: "#555", textDecoration: "none" }}>OpenAPI Spec</a>
+                <span style={{ fontSize: "0.85rem", color: "#999" }}>Base Mainnet</span>
+                <span style={{ fontSize: "0.85rem", color: "#999" }}>USDC Payments</span>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
 
